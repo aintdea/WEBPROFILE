@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hi! This is Dea.</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://kit.fontawesome.com/7147c5426c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="logo.png" class="logo">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Subject</a></li>
+                <li><a href="#">Hobbies</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>College Student.</p>
+            <h1>Hello, I am <span>Dea</span> Ainun Latifah,<br>an aspiring UI/UX designer.</h1>
+        </div>
+    </div>
+</div>
+<!-- ABOUT -->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="profile.png">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>Hello! I'm Dea Ainun Latifah, a 20-year-old college student with a passion for creativity and a love for writing. I thrive on engaging in a wide range of creative activities, constantly seeking new avenues to express myself. One of my greatest aspirations is to become a UI/UX designer, where I can combine my artistic talents with my interest in user-centered design to create intuitive and visually appealing digital experiences. I'm excited about the journey ahead and look forward to sharing my creative endeavors with the world. Whether it's through writing, design, or any other form I'm always eager to explore new horizons and push the boundaries of my creativity.</p>
+                
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>HTML</span><br>Creating framework for websites</li>
+                        <li><span>CSS</span><br>Designing Web/App Interfaces</li>
+                        <li><span>MYSQL</span><br>Data management</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>2022 - Current </span><br>Lab Assitant</label></li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2015</span><br>Graduate at SDN Kramat Pela 07</li>
+                        <li><span>2018</span><br>Gradaute at SMPN 11 Jakarta</li>
+                        <li><span>2021</span><br>Graduate at SMAN 46 Jakarta</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- SUBJECTS -->
+<div id="subjects">
+    <div class="container">
+        <h1 class="sub-title">My Favorite Subjects</h1>
+        <div class="subjects-list">
+            <div>
+                <i class="fa-solid fa-book-open" style="color: #ffffff;"></i>
+                <h2>English</h2>
+                <p>English is a global language spoken by millions of people worldwide. It serves as a common means of communication in business, education, and international relations. It's known for its rich vocabulary and is often used as a second language by non-native speakers.</p>
+                <a href="#">Learn more...</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-chart-line" style="color: #ffffff;"></i>
+                <h2>Statistics</h2>
+                <p>Statistics is the study of data collection, analysis, interpretation, and presentation. It plays a crucial role in making informed decisions in various fields, including science, economics, and social sciences. </p>
+                <a href="#">Learn more...</a>
+            </div>
+            <div>
+                <i class="fa-solid fa-code" style="color: #ffffff;"></i>
+                <h2>MYSQL</h2>
+                <p>MySQL is an open-source relational database management system (RDBMS) used for storing, managing, and retrieving structured data. It's a vital tool for web development, data storage, and data analysis due to its scalability and reliability.</p>
+                <a href="#">Learn more...</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- HOBBIES -->
+<div id="hobbies">
+    <div class="container">
+        <h1 class="sub-title">My Hobbies</h1>
+        <div class="hobbies-list">
+            <div class="hobbies">
+                <img src="guitar.png">
+                <div class="layer">
+                    <h3>Playing Guitar</h3>
+                    <p>When boredom strikes is when jammming is required.</p>
+                </div>
+            </div>
+            <div class="hobbies">
+                <img src="reading.png">
+                <div class="layer">
+                    <h3>Reading Non-Fictions</h3>
+                    <p>Her sweet escapade from reality is within books of valor might and fantasy lores.</p>
+                </div>
+            </div>
+            <div class="hobbies">
+                <img src="writing.png">
+                <div class="layer">
+                    <h3>Writing</h3>
+                    <p>World-Building and character developments, or even a good article nor poems.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+
+    var tablinks= document.getElementsByClassName("tab-links")
+    var tabcontents= document.getElementsByClassName("tab-contents")
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link")
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab")
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab")
+    }
+
+</script>
+</body>
+</html>
